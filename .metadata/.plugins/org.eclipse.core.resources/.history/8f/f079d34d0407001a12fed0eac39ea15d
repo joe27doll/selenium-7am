@@ -1,5 +1,0 @@
-package com.sun.corba.se.spi.orbutil.fsm;
-
-public class Action {
-
-}
