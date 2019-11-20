@@ -1,0 +1,40 @@
+package SeleniumWorkout;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Redbuslogin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\jesus mary\\eclipse-workspace\\lib\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.get("http://toolsqa.com/automation-practice-table/");
+		List<WebElement> rows = driver.findElements(By.tagName("tr"));
+		for (WebElement r : rows) {
+			List<WebElement> head = r.findElements(By.tagName("th"));
+			for (WebElement h : head) {
+				String text = h.getText();
+				System.out.println(text);
+				
+			}
+			
+			List<WebElement> cells = r.findElements(By.tagName("td"));
+			for (WebElement c : cells) {
+				String text = c.getText();
+				System.out.println(text);
+				
+			}
+			
+			
+			
+		}
+		
+	}
+
+}
